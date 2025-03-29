@@ -9,6 +9,16 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 ```
 
 ```{r}
+
+library(tidyverse)
+logged_data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTT0ErqC_L1QVPn25XE_IeVyniNX57y24rVRu62nvuM7QVxe5B_ysUc2t95Iu9OQR_aJ0RbKaygiDwi/pub?gid=920851407&single=true&output=csv")
+
+latest_data <- rename(logged_data, 
+                      social_app = 2,
+                      ad_type = 3,
+                      ad_duration = 4,
+                      click_or_not = 5)
+
 latest_data %>%
   ggplot(aes(x = respondent_status, fill = click_or_not)) +
   geom_bar(position = "dodge") +
@@ -24,15 +34,6 @@ latest_data %>%
 ```
 
 ```{r}
-library(tidyverse)
-logged_data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTT0ErqC_L1QVPn25XE_IeVyniNX57y24rVRu62nvuM7QVxe5B_ysUc2t95Iu9OQR_aJ0RbKaygiDwi/pub?gid=920851407&single=true&output=csv")
-
-latest_data <- rename(logged_data, 
-                      social_app = 2,
-                      ad_type = 3,
-                      ad_duration = 4,
-                      click_or_not = 5)
-
 latest_data %>%
   ggplot(aes(x = ad_duration)) +
   geom_bar(fill = "#6a0dad") +
