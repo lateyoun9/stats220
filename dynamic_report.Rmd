@@ -18,12 +18,9 @@ latest_data <- rename(logged_data,
                       ad_type = 3,
                       ad_duration = 4,
                       click_or_not = 5)
-```
 
-```{r}
-latest_data %>%
-  ggplot(aes(x = respondent_status, fill = click_or_not)) +
-  geom_bar(position = "dodge") +
+ggplot(latest_data) +
+  geom_bar(aes(x = respondent_status, fill = click_or_not), position = "dodge") +
   labs(
     title = "Relationship between User Status and Ad Clicks",
     subtitle = "Compare how students and workers respond to ads",
@@ -33,6 +30,7 @@ latest_data %>%
   ) +
   theme_minimal() +
   scale_fill_manual(values = c("No" = "#DC143C", "Yes" = "#0000FF"))
+
 ```
 
 ```{r}
