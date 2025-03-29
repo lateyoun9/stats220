@@ -5,15 +5,12 @@ output: html_fragment
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
-
 ```
 
 
 
 ```{css}
-
 ```
-
 ## What's going on with this data?
 
 You need to change the contents of this Rmd! Replace the R code and markdown give below in this template document.
@@ -36,9 +33,6 @@ latest_data %>%
     x = "Ad Duration (seconds)",
     y = "Count"
   )
-
-
-
 ```
 
 
@@ -55,9 +49,6 @@ type_data <- latest_data %>%
 
 type_data_rename <- rename(type_data,
                            ad_times = 2)
-
-
-
 ```
 ```{r}
 type_data_rename %>%
@@ -69,7 +60,6 @@ type_data_rename %>%
     x = "Ad_type",
     y = "Ad_times"
   )
-
 ```
 ```{r}
 max(type_data_rename$ad_times)
