@@ -23,6 +23,7 @@ latest_data %>%
   geom_bar(fill = "#6a0dad") +
   labs(
     title = "Distribution of Ad Durations",
+    subtitle = "Record the time most ads are played",
     x = "Ad Duration (seconds)",
     y = "Count"
   )
@@ -35,7 +36,11 @@ latest_data %>%
   ggplot() +
   geom_bar(aes(x = click_or_not),
            fill = "#6CC0BA") +
-  labs(title = "")
+  labs(title = "Ad clicks",
+       subtitle = "Comparing whether users click on ads when using social media on a daily basis",
+       x = "Click or Not",
+       y = "Number of times"
+       )
 
 type_data <- latest_data %>%
   separate_rows(ad_type, sep = ",\\s") %>%
@@ -52,19 +57,25 @@ type_data_rename %>%
   labs(
     title = "Ad type appearance times",
     subtitle = "Compare ad types and ad appearance times",
-    x = "Ad_type",
-    y = "Ad_times"
+    x = "Ad type",
+    y = "Ad times"
   )
 
 ```
 ```{r}
-max(type_data_rename$ad_times)
-min(type_data_rename$ad_times)
+max_ad <- max(type_data_rename$ad_times)
+min_ad <- min(type_data_rename$ad_times)
 
 latest_data <- latest_data %>%
   mutate(click_or_not = if_else(click_or_not == "Yes", 1, 0))
 
-mean(latest_data$click_or_not)
+click_rate <- mean(latest_data$click_or_not) * 100  
+
+cat(sprintf(
+  "In this dataset, the maximum number of ad impressions is %d, while the minimum is %d. After processing the data, the overall click-through rate for the ads is %.2f%%.",
+  max_ad, min_ad, click_rate
+))
+
 # 1. Data is loaded from Google Sheet and column names are renamed for easier use
 # 2. Two bar charts show the distribution of ad duration and whether the ad was clicked
 # 3. ad_type allows multiple selections, so separate_rows is used to split them
