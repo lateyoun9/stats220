@@ -90,9 +90,11 @@ latest_data <- latest_data %>%
 click_rate <- mean(latest_data$click_or_not) * 100  
 
 cat(sprintf(
-  "In this dataset, the maximum number of ad impressions is %d, while the minimum is %d. After processing the data, the overall click-through rate for the ads is %.2f%%.",
+  "In this dataset, the maximum number of ad impressions is %d, while the minimum is %d. 
+After processing the data, the overall click-through rate for the ads is %.2f%%.",
   max_ad, min_ad, click_rate
 ))
+
 
 # 1. Data is loaded from Google Sheet and column names are renamed for easier use
 # 2. Two bar charts show the distribution of ad duration and whether the ad was clicked
