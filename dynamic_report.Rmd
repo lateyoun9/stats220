@@ -1,0 +1,75 @@
+---
+title: My dynamic report
+output: html_fragment
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
+
+```
+
+```{r}
+library(tidyverse)
+logged_data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTT0ErqC_L1QVPn25XE_IeVyniNX57y24rVRu62nvuM7QVxe5B_ysUc2t95Iu9OQR_aJ0RbKaygiDwi/pub?gid=920851407&single=true&output=csv")
+
+latest_data <- rename(logged_data, 
+                      social_app = 2,
+                      ad_type = 3,
+                      ad_duration = 4,
+                      click_or_not = 5)
+
+latest_data %>%
+  ggplot(aes(x = ad_duration)) +
+  geom_bar(fill = "#6a0dad") +
+  labs(
+    title = "Distribution of Ad Durations",
+    x = "Ad Duration (seconds)",
+    y = "Count"
+  )
+
+```
+
+
+```{r}
+latest_data %>%
+  ggplot() +
+  geom_bar(aes(x = click_or_not),
+           fill = "#6CC0BA") +
+  labs(title = "")
+
+type_data <- latest_data %>%
+  separate_rows(ad_type, sep = ",\\s") %>%
+  count(ad_type, sort = TRUE)
+
+type_data_rename <- rename(type_data,
+                           ad_times = 2)
+
+```
+```{r}
+type_data_rename %>%
+  ggplot(aes(x = ad_type, y = ad_times)) +
+  geom_bar(stat = "identity", fill = "#27AEB9") +
+  labs(
+    title = "Ad type appearance times",
+    subtitle = "Compare ad types and ad appearance times",
+    x = "Ad_type",
+    y = "Ad_times"
+  )
+
+```
+```{r}
+max(type_data_rename$ad_times)
+min(type_data_rename$ad_times)
+
+latest_data <- latest_data %>%
+  mutate(click_or_not = if_else(click_or_not == "Yes", 1, 0))
+
+mean(latest_data$click_or_not)
+# 1. Data is loaded from Google Sheet and column names are renamed for easier use
+# 2. Two bar charts show the distribution of ad duration and whether the ad was clicked
+# 3. ad_type allows multiple selections, so separate_rows is used to split them
+# 4. count() is used to calculate how many times each ad type appears
+# 5. ggplot is used to visualize the frequency of each ad type
+# 6. max()/min() are used to find the most and least frequent ad types
+# 7. mean() are used to find click-through rate of ads
+```
