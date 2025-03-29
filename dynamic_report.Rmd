@@ -17,7 +17,9 @@ latest_data <- rename(logged_data,
                       social_app = 2,
                       ad_type = 3,
                       ad_duration = 4,
-                      click_or_not = 5)
+                      click_or_not = 5,
+                      respondent_status = 6,
+                      )
 
 ggplot(latest_data) +
   geom_bar(aes(x = respondent_status, fill = click_or_not), position = "dodge") +
