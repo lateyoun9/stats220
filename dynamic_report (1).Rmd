@@ -39,14 +39,6 @@ latest_data %>%
 
 
 
-# 1. Data is loaded from Google Sheet and column names are renamed for easier use
-# 2. Two bar charts show the distribution of ad duration and whether the ad was clicked
-# 3. ad_type allows multiple selections, so separate_rows is used to split them
-# 4. count() is used to calculate how many times each ad type appears
-# 5. ggplot is used to visualize the frequency of each ad type
-# 6. max()/min() are used to find the most and least frequent ad types
-# 7. mean() are used to find click-through rate of ads
-
 ```
 
 
@@ -87,4 +79,12 @@ latest_data <- latest_data %>%
   mutate(click_or_not = if_else(click_or_not == "Yes", 1, 0))
 
 mean(latest_data$click_or_not)
+
+# 1. Data is loaded from Google Sheet and column names are renamed for easier use
+# 2. Two bar charts show the distribution of ad duration and whether the ad was clicked
+# 3. ad_type allows multiple selections, so separate_rows is used to split them
+# 4. count() is used to calculate how many times each ad type appears
+# 5. ggplot is used to visualize the frequency of each ad type
+# 6. max()/min() are used to find the most and least frequent ad types
+# 7. mean() are used to find click-through rate of ads
 ```
