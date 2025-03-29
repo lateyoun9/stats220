@@ -9,6 +9,21 @@ knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, error=FALSE)
 ```
 
 ```{r}
+latest_data %>%
+  ggplot(aes(x = respondent_status, fill = click_or_not)) +
+  geom_bar(position = "dodge") +
+  labs(
+    title = "Relationship between User Status and Ad Clicks",
+    subtitle = "Compare how students and workers respond to ads",
+    x = "User Status",
+    y = "Count",
+    fill = "Clicked Ad?"
+  ) +
+  theme_minimal() +
+  scale_fill_manual(values = c("No" = "#DC143C", "Yes" = "#0000FF"))
+```
+
+```{r}
 library(tidyverse)
 logged_data <- read.csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTT0ErqC_L1QVPn25XE_IeVyniNX57y24rVRu62nvuM7QVxe5B_ysUc2t95Iu9OQR_aJ0RbKaygiDwi/pub?gid=920851407&single=true&output=csv")
 
@@ -84,4 +99,3 @@ cat(sprintf(
 # 6. max()/min() are used to find the most and least frequent ad types
 # 7. mean() are used to find click-through rate of ads
 ```
-
