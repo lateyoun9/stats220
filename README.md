@@ -33,7 +33,7 @@ My animated meme uses four captions:
 
 Here is my animated meme:
 
-![]([project1/my_animated_meme.gif](https://github.com/lateyoun9/stats220/blob/main/project1/my_animated_meme.gif))
+![](https://github.com/lateyoun9/stats220/blob/main/project1/my_animated_meme.gif?raw=true)
 
 ## Links
 
