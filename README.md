@@ -18,6 +18,9 @@ I am taking *STATS 220* because I want to gain experience and understanding in t
 2. Learn more about Markdown
 3. Build useful data projects
 
+##Helpful website:  
+[GitHub](https://github.com)
+
 ## A GIF 
 
 ![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3dHk2a2M3Y3V4aTU2ejM5YWZwem10bGd6bjg1eTJ2cnNxM2E3amY2dSZlcD12MV9naWZzX3RyZW5kaW5nJmN0PWc/u36Ow6jBvWCFW/giphy.gif)
