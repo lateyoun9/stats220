@@ -19,7 +19,7 @@ I am taking *STATS 220* because I want to gain experience and understanding in t
 3. Build useful data projects
 
 ##Helpful website:  
-[GitHub](https://github.com)
+[University of Auckland](https://www.auckland.ac.nz)
 
 ## A GIF 
 
