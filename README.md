@@ -38,5 +38,5 @@ Here is my animated meme:
 ## Links
 
 - [University of Auckland](https://www.auckland.ac.nz)
-- [Project 1 report in this repo](project1/project1_report.html)
-- [GitHub Pages version of my project](https://lateyoun9.github.io/stats220/project1/project1_report.html)
+- [My stats220 GitHub repo](https://github.com/lateyoun9/stats220)
+- [My Project 1 report on GitHub Pages](https://lateyoun9.github.io/stats220/project1/project1_report.html)
