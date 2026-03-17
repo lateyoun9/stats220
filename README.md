@@ -8,7 +8,7 @@ I am taking *STATS 220* because I want to gain experience and understanding in t
 
 ## A little about me
 
-- I am undertaking a degree in data science.
+- I am undertaking a degree in stats.
 - I am taking STATS 220 because I want to gain experience and understanding in the processes of data collection, storage, retrieval, manipulation, and management.
 - I am interested in learning about processing various data using R programming.
 
