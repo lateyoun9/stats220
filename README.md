@@ -39,4 +39,4 @@ Here is my animated meme:
 
 - [University of Auckland](https://www.auckland.ac.nz)
 - [Project 1 report in this repo](project1/project1_report.html)
-- [GitHub Pages version of my project](https://your-username.github.io/stats220/project1/project1_report.html)
+- [GitHub Pages version of my project](https://lateyoun9.github.io/stats220/project1/project1_report.html)
