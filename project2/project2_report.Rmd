@@ -1,0 +1,49 @@
+---
+title: "Project 2"
+author: "Nero Zhang"
+subtitle: "STATS 220 Semester One, 2026"
+output:
+  html_document:
+    code_folding: hide
+    self_contained: true
+---
+
+## Introduction
+
+I focused my Project 2 data collection on online advertising. Over several days, I recorded the ads I saw on YouTube, Instagram, TikTok, Facebook, and X. I tracked how often ads appeared, what they were promoting, how long they were, whether I would click on them, and what time of day I saw them. I chose this topic because online ads are part of everyday life and can be quite different across platforms.
+
+When designing my Google Form, I made sure the questions were simple and quick to answer. Since I was recording ads as I saw them, the form needed to be easy to complete on my phone. I used short questions and different response types, such as numbers for ad length and categories for platform, ad type, click response, and time of day. This made the data easier to organise.
+
+This data can show useful patterns. For example, I can compare which platforms showed the most ads, which types of ads appeared most often, and which ones seemed more interesting to click on. This helps me understand my online advertising experience more clearly.
+
+My Google Form responder link is here: [Online advertising observation form](https://docs.google.com/forms/d/19bOrj-yF1ZdTndxXNDd_PU7zPeoen1nMYsBfzHitFO8/viewform)
+
+Form design and data collection for this project were completed by me.
+
+## Dynamic report
+
+My published dynamic report is available here: [GitHub Pages dynamic report](https://lateyoun9.github.io/stats220/)
+
+This webpage is dynamic because it is connected to the published CSV version of my Google Sheet. As more observations are added through the Google Form, the underlying data changes, and the report updates when the page is reloaded. This means the report is not just a static summary of one fixed dataset. Instead, it is a live reporting system that can continue to reflect my online advertising observations over time. In the report, I used dynamic text to comment on summary values such as the total number of ads logged, the average duration of ads, and the proportion of ads that seemed attractive enough to click. I also included bar charts that compare the frequency of platforms and ad types so the report communicates both numerical summaries and visual patterns.
+
+## Creativity
+
+I think my project shows creativity in a few ways. First, I chose to focus on something from my everyday life: the online ads I see while using social media and video platforms. This made the project feel more personal and practical. I also designed the form to record different parts of each ad, like the platform, ad type, length, whether I would click on it, and the time of day. This gave me more useful data to work with.
+
+I also showed creativity in the way I presented my results. In my dynamic report, I did not just show the numbers. I also added comments to explain what the charts were showing, so the report is easier to understand. I changed the look of the report with CSS as well, which made it look more polished. I also used some data cleaning and reshaping to make clearer bar charts. Overall, these choices made the project more interesting and effective than a very basic submission.
+
+## Learning reflection
+
+One important thing I learned from Module 2 is that a report does not have to be static. Before, I thought a report was something you wrote once and then left as it was. In this project, I learned that an R Markdown report can update when the data changes, which helped me see how data collection, analysis, and reporting can all be connected.
+
+This project also made me interested in other ways of showing data online. In the future, I would like to learn more about dashboards, interactive graphs, and reports that update automatically. Even though I did this project by myself, I also realised that in group work it is important to explain your ideas clearly. Next time, I want to get better at sharing tasks early, checking in with others, and making sure everyone understands the goal of the project.
+
+## Appendix
+
+```{r file='exploration.R', eval=FALSE, echo=TRUE}
+
+```
+
+```{r file='dynamic_report.Rmd', eval=FALSE, echo=TRUE}
+
+```
